@@ -1,0 +1,23 @@
+{
+  "name": "serv00",
+  "version": "1.0.0",
+  "description": "serv00 website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "pm2:start": "node node_modules/pm2/bin/pm2 start ecosystem.config.js",
+    "pm2:restart": "node node_modules/pm2/bin/pm2 restart all",
+    "pm2:kill": "node node_modules/pm2/bin/pm2 kill",
+    "pm2:monit": "node node_modules/pm2/bin/pm2 monit",
+    "pm2:status": "node node_modules/pm2/bin/pm2 status",
+    "pm2:logs": "node node_modules/pm2/bin/pm2 logs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pm2": "^5.4.3"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
