@@ -5,7 +5,8 @@
 
 在 [serv00.com](https://www.serv00.com/) 网站上部署服务
 
-> 通过 pm2 启动的服务，并进行进程管理
+> 通过 pm2 启动的服务，并进行进程管理<br>
+> 需要通过 ssh 登录进行保活，可查看 [SSH_KeepAlive.md](./SSH_KeepAlive.md)
 
 ## 步骤
 
