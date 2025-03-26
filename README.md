@@ -65,8 +65,19 @@
 
 ```sh
 mkdir ~/.npm-global
-npm config set prefix ~/.npm-global
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
+npm config set prefix '~/.npm-global' 
+
+echo "
+alias l='ls -lAh'
+alias ll='ls -lh'
+alias gp='git push'
+alias gpr='git pull -r'
+alias reload='source \$HOME/.bash_profile'
+alias path='echo -e \${PATH//:/\\\\n}'
+
+export PATH=~/.npm-global/bin:~/bin:\$PATH 
+" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
 npm install -g pm2
 ```
