@@ -57,3 +57,16 @@
    npm run pm2:monit
    ```
 5. 通过页面访问。访问 **http://<用户名>.serv00.net** 和 **http://<用户名>.serv00.net/ariang** 地址
+
+
+## 配置NPM
+
+修改 npm 的 prefix 路径，并添加到 `.bashrc` 脚本中
+
+```sh
+mkdir ~/.npm-global
+npm config set prefix ~/.npm-global
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+npm install -g pm2
+```
